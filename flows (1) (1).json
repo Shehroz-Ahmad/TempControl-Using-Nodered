@@ -1,0 +1,2068 @@
+[
+    {
+        "id": "43f38966b2514af8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8e9538eb.4e25b8",
+        "type": "tab",
+        "label": "OPC UA Server",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "36a8ab45.86ab94",
+        "type": "tab",
+        "label": "Overview",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "372cc78f.3c11f8",
+        "type": "tab",
+        "label": "Temperature 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3df697c2.b13998",
+        "type": "tab",
+        "label": "Heater 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d8068ea.5aa86f",
+        "type": "tab",
+        "label": "LED",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a67daa24.68d77",
+        "type": "tab",
+        "label": "Manipulated Variable 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "36e9f824.16b2",
+        "type": "ui_group",
+        "name": "Monitoring + Optimization",
+        "tab": "e86391ef.481218",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "d982760ead948d02",
+        "type": "OpcUa-Endpoint2",
+        "name": "",
+        "endpoint": "opc.tcp://localhost:4840/UA/NodeRED/Compact",
+        "securityMode": "None",
+        "securityPolicy": "None",
+        "userIdentityType": "Anonymous",
+        "userName": "",
+        "password": "",
+        "userCertificate": "",
+        "userPrivatekey": "",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "useTransport": true,
+        "maxChunkCount": "1",
+        "maxMessageSize": "8192",
+        "receiveBufferSize": "8192",
+        "sendBufferSize": "8192",
+        "subscriptions": [
+            {
+                "id": "s0",
+                "name": "Default Subscription",
+                "isDefault": true,
+                "parameters": {
+                    "publishingEnabled": true,
+                    "requestedLifetimeCount": "1000",
+                    "requestedMaxKeepAliveCount": "10",
+                    "requestedPublishingInterval": "1000",
+                    "maxNotificationsPerPublish": "0",
+                    "priority": "100"
+                }
+            },
+            {
+                "id": "s1",
+                "name": "Slow Subscription",
+                "isDefault": true,
+                "parameters": {
+                    "publishingEnabled": true,
+                    "requestedLifetimeCount": "100",
+                    "requestedMaxKeepAliveCount": "20",
+                    "requestedPublishingInterval": "5000",
+                    "maxNotificationsPerPublish": "100",
+                    "priority": "10"
+                }
+            },
+            {
+                "id": "s2",
+                "name": "Fast Subscription",
+                "isDefault": true,
+                "parameters": {
+                    "publishingEnabled": true,
+                    "requestedLifetimeCount": "4000",
+                    "requestedMaxKeepAliveCount": "100",
+                    "requestedPublishingInterval": "250",
+                    "maxNotificationsPerPublish": "100",
+                    "priority": "200"
+                }
+            }
+        ]
+    },
+    {
+        "id": "572c601d.e4943",
+        "type": "ui_group",
+        "name": "Monitoring + Optimization",
+        "tab": "c866ef46.b58978",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "89d0a5dc.9fed88",
+        "type": "ui_group",
+        "name": "Monitoring + Optimization",
+        "tab": "8b0e0efa.e4a368",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "58c39458.f2096c",
+        "type": "ui_group",
+        "name": "Monitoring + Optimization",
+        "tab": "ec539c2b.a55dc",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "b1bc9efd.eb9e48",
+        "type": "ui_group",
+        "name": "Monitoring + Optimization",
+        "tab": "9b8e15ac.958438",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": false
+    },
+    {
+        "id": "e86391ef.481218",
+        "type": "ui_tab",
+        "name": "Overview",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c866ef46.b58978",
+        "type": "ui_tab",
+        "name": "Temperature 1",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8b0e0efa.e4a368",
+        "type": "ui_tab",
+        "name": "ActualTemperature 1",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ec539c2b.a55dc",
+        "type": "ui_tab",
+        "name": "LED",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9b8e15ac.958438",
+        "type": "ui_tab",
+        "name": "Manipulated variable 1",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4844b16ba0bd6486",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "11bca587.33e05a",
+        "type": "opcua-compact-server",
+        "z": "8e9538eb.4e25b8",
+        "port": "4840",
+        "endpoint": "",
+        "productUri": "",
+        "acceptExternalCommands": true,
+        "maxAllowedSessionNumber": "10",
+        "maxConnectionsPerEndpoint": "10",
+        "maxAllowedSubscriptionNumber": "100",
+        "alternateHostname": "",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": true,
+        "allowAnonymous": true,
+        "individualCerts": false,
+        "isAuditing": false,
+        "serverDiscovery": true,
+        "users": [],
+        "xmlsetsOPCUA": [],
+        "publicCertificateFile": "",
+        "privateCertificateFile": "",
+        "registerServerMethod": "3",
+        "discoveryServerEndpointUrl": "",
+        "capabilitiesForMDNS": "",
+        "maxNodesPerRead": 1000,
+        "maxNodesPerWrite": 1000,
+        "maxNodesPerHistoryReadData": 100,
+        "maxNodesPerBrowse": 3000,
+        "maxBrowseContinuationPoints": "10",
+        "maxHistoryContinuationPoints": "10",
+        "delayToInit": "1000",
+        "delayToClose": "200",
+        "serverShutdownTimeout": "100",
+        "addressSpaceScript": "function constructAlarmAddressSpace(server, addressSpace, eventObjects, done) {\n  // server = the created node-opcua server\n  // addressSpace = address space of the node-opcua server\n  // eventObjects = add event variables here to hold them in memory from this script\n\n  // internal sandbox objects are:\n  // node = the compact server node,\n  // coreServer = core compact server object for debug and access to NodeOPCUA\n  // this.sandboxNodeContext = node context node-red\n  // this.sandboxFlowContext = flow context node-red\n  // this.sandboxGlobalContext = global context node-red\n  // this.sandboxEnv = env variables\n  // timeout and interval functions as expected from nodejs\n\n  const opcua = coreServer.choreCompact.opcua;\n  const LocalizedText = opcua.LocalizedText;\n  const namespace = addressSpace.getOwnNamespace();\n\n  const Variant = opcua.Variant;\n  const DataType = opcua.DataType;\n  const DataValue = opcua.DataValue;\n\n  var flexServerInternals = this;\n\n  coreServer.debugLog(\"init dynamic address space\");\n  const rootFolder = addressSpace.findNode(\"RootFolder\");\n\n  node.warn(\"construct new address space for OPC UA\");\n\n//Deklaration der Struktur\n  const myDevice = namespace.addFolder(rootFolder.objects, {\n    \"browseName\": \"Device\"\n  });\n  const dynVar = namespace.addFolder(myDevice, { \"browseName\": \"DynamicVariables\" });\n  const par = namespace.addFolder(myDevice, { \"browseName\": \"Parameters\" });\n  const perf = namespace.addFolder(myDevice, { \"browseName\": \"Performance\" });\n  const nameplate = namespace.addFolder(myDevice, { \"browseName\": \"Nameplate\" });\n\n//Deklaration der Variablen\n\nconst temp1 = namespace.addVariable({\n    \"organizedBy\": dynVar,\n    \"browseName\": \"Input: Temperature_1\",\n    \"nodeId\": \"ns=1;s=T1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n          \"dataType\": DataType.Double,\n          \"value\": 40,\n          \"min\": 30,\n          \"max\": 60 \n    }\n});\n\n\n  const ctrlerr1 = namespace.addVariable({\n    \"organizedBy\": dynVar,\n    \"browseName\": \"ControllerError_1\",\n    \"nodeId\": \"ns=1;s=CE1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"dataType\": DataType.Double,\n      \"value\": null,\n      \"min\": -60,\n      \"max\": 60\n    }\n  });\n  const manvar1 = namespace.addVariable({\n    \"browseName\": \"ManipulatedVariable_1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"dataType\": DataType.Double,\n      \"value\": null,\n      \"min\": 0,\n      \"max\": 80\n    },\n    \"nodeId\": \"ns=1;s=MV1\"\n  });\n\n  const actTemp1 = namespace.addVariable({\n    \"browseName\": \"Output: actualTemperature_1\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"dataType\": DataType.Double,\n      \"value\": null,\n      \"min\": 30,\n      \"max\": 60\n    },\n    \"nodeId\": \"ns=1;s=H1\"\n  });\n\n  const led = namespace.addVariable({\n    \"browseName\": \"LED\",\n    \"dataType\": \"Boolean\",\n    \"value\": {\n      \"dataType\": DataType.Boolean,\n      \"value\": false\n    },\n    \"nodeId\": \"ns=1;s=led\"\n  });\n\n  const integralKi = namespace.addVariable({\n    \"browseName\": \"Integral: Ki\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"dataType\": DataType.Double,\n      \"value\": 0.0088\n    },\n    \"nodeId\": \"ns=1;s=ki\"\n  });\n\n  const proportionalKp = namespace.addVariable({\n    \"browseName\": \"Proportional: Kp\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"dataType\": DataType.Double,\n      \"value\": 1.6\n    },\n    \"nodeId\": \"ns=1;s=kp\"\n  });\n\n  const temperature1HighLimit = namespace.addVariable({\n    \"browseName\": \"Temperature_1_High_Limit\",\n    \"dataType\": \"Double\",\n    \"value\": {\n      \"dataType\": DataType.Double,\n      \"value\": 60\n    },\n    \"nodeId\": \"ns=1;s=T1_limit\"\n  });\n\n  const manufacturerName = namespace.addVariable({\n    \"browseName\": \"ManufacturerName\",\n    \"dataType\": \"String\",\n    \"value\": {\n      \"dataType\": DataType.String,\n      \"value\": \"Byu Prism\"\n    },\n    \"nodeId\": \"ns=1;s=manufacturer_name\"\n  });\n\n  const manufacturerProductDesignation = namespace.addVariable({\n    \"browseName\": \"ManufacturerProductDesignation\",\n    \"dataType\": \"String\",\n    \"value\": {\n      \"dataType\": DataType.String,\n      \"value\": \"Arduino Temperature Control Lab\"\n    },\n    \"nodeId\": \"ns=1;s=manufacturer_product_designation\"\n  });\n\n  const manufacturerProductFamily = namespace.addVariable({\n    \"browseName\": \"ManufacturerProductFamily\",\n    \"dataType\": \"String\",\n    \"value\": {\n      \"dataType\": DataType.String,\n      \"value\": \"Educational Equipment\"\n    },\n    \"nodeId\": \"ns=1;s=manufacturer_product_family\"\n  });\n\n  const serialNumber = namespace.addVariable({\n    \"browseName\": \"SerialNumber\",\n    \"dataType\": \"String\",\n    \"value\": {\n      \"dataType\": DataType.String,\n      \"value\": \"F7DH4HJ\"\n    },\n    \"nodeId\": \"ns=1;s=serial_number\"\n  });\n\n  const yearOfConstruction = namespace.addVariable({\n    \"browseName\": \"YearOfConstruction\",\n    \"dataType\": \"String\",\n    \"value\": {\n      \"dataType\": DataType.String,\n      \"value\": \"2020\"\n    },\n    \"nodeId\": \"ns=1;s=year_of_construction\"\n  });\n\n  const address = namespace.addVariable({\n    \"browseName\": \"Address\",\n    \"dataType\": \"String\",\n    \"value\": {\n      \"dataType\": DataType.String,\n      \"value\": \"Brigham Young University, Provo, UT 84602\"\n    },\n    \"nodeId\": \"ns=1;s=address\"\n  });\n\n\n\n\n  //------------------------------------------------------------------------------\n  // Add a view\n  //------------------------------------------------------------------------------\n\n  coreServer.debugLog(\"create dynamic address space done\");\n  node.warn(\"construction of new address space for OPC UA done\");\n\n  done();\n}\n",
+        "x": 600,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "248d8d85.7a4412",
+        "type": "inject",
+        "z": "36a8ab45.86ab94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "2fbfa116.698a26"
+            ]
+        ]
+    },
+    {
+        "id": "cfaa7840.5342",
+        "type": "ui_text",
+        "z": "36a8ab45.86ab94",
+        "group": "36e9f824.16b2",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ManufacturerName:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 700,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b85853dc.1d72c",
+        "type": "ui_text",
+        "z": "36a8ab45.86ab94",
+        "group": "36e9f824.16b2",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ManufacturerProductDesignation:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 660,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "fc3f114f.ac694",
+        "type": "ui_text",
+        "z": "36a8ab45.86ab94",
+        "group": "36e9f824.16b2",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Address:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 720,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "7c323063.60a14",
+        "type": "ui_text",
+        "z": "36a8ab45.86ab94",
+        "group": "36e9f824.16b2",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ManufacturerProductFamily:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 680,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "6d198a8e.21fa1c",
+        "type": "ui_text",
+        "z": "36a8ab45.86ab94",
+        "group": "36e9f824.16b2",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SerialNumber:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 680,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "6c7a5579.fd7dfc",
+        "type": "ui_text",
+        "z": "36a8ab45.86ab94",
+        "group": "36e9f824.16b2",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "YearOfConstruction:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 700,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "2fbfa116.698a26",
+        "type": "ui_template",
+        "z": "36a8ab45.86ab94",
+        "group": "36e9f824.16b2",
+        "name": "",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"text-align: center\">\n    <img src=\"../AutomationLab.png\" width=\"100%\"/>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 480,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89b595d1.2fcd2",
+        "type": "inject",
+        "z": "36a8ab45.86ab94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "ca7b18ae.e5a2a8"
+            ]
+        ]
+    },
+    {
+        "id": "ca7b18ae.e5a2a8",
+        "type": "ui_template",
+        "z": "36a8ab45.86ab94",
+        "group": "36e9f824.16b2",
+        "name": "Digital Nameplate",
+        "order": 6,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"text-align: center; font-size: 1em; color: white; background: black\">\n    Digital Nameplate\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 470,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad6444bb362bc634",
+        "type": "OpcUa-Client2-Read",
+        "z": "36a8ab45.86ab94",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "cfaa7840.5342"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "3decf8b8e70267a1",
+        "type": "inject",
+        "z": "36a8ab45.86ab94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=manufacturer_name",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "ad6444bb362bc634"
+            ]
+        ]
+    },
+    {
+        "id": "05616471486caca1",
+        "type": "OpcUa-Client2-Read",
+        "z": "36a8ab45.86ab94",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 390,
+        "y": 460,
+        "wires": [
+            [
+                "b85853dc.1d72c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "468f3e6966782429",
+        "type": "inject",
+        "z": "36a8ab45.86ab94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=manufacturer_product_designation",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "05616471486caca1"
+            ]
+        ]
+    },
+    {
+        "id": "2fc395668604a2c0",
+        "type": "OpcUa-Client2-Read",
+        "z": "36a8ab45.86ab94",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 470,
+        "y": 580,
+        "wires": [
+            [
+                "fc3f114f.ac694"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "ac6fed030a6ba4fa",
+        "type": "inject",
+        "z": "36a8ab45.86ab94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=address",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 580,
+        "wires": [
+            [
+                "2fc395668604a2c0"
+            ]
+        ]
+    },
+    {
+        "id": "c92fa7fb371cb3d5",
+        "type": "OpcUa-Client2-Read",
+        "z": "36a8ab45.86ab94",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 370,
+        "y": 700,
+        "wires": [
+            [
+                "7c323063.60a14"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "bab37850a9108a4d",
+        "type": "inject",
+        "z": "36a8ab45.86ab94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=manufacturer_product_family",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 700,
+        "wires": [
+            [
+                "c92fa7fb371cb3d5"
+            ]
+        ]
+    },
+    {
+        "id": "c565593d8e9c505e",
+        "type": "OpcUa-Client2-Read",
+        "z": "36a8ab45.86ab94",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 370,
+        "y": 820,
+        "wires": [
+            [
+                "6d198a8e.21fa1c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "55b97ca92bddaa7c",
+        "type": "inject",
+        "z": "36a8ab45.86ab94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=serial_number",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 820,
+        "wires": [
+            [
+                "c565593d8e9c505e"
+            ]
+        ]
+    },
+    {
+        "id": "afe64d67512e3c4e",
+        "type": "OpcUa-Client2-Read",
+        "z": "36a8ab45.86ab94",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 350,
+        "y": 940,
+        "wires": [
+            [
+                "6c7a5579.fd7dfc"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f03dd37cc1c7eb49",
+        "type": "inject",
+        "z": "36a8ab45.86ab94",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=year_of_construction",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 940,
+        "wires": [
+            [
+                "afe64d67512e3c4e"
+            ]
+        ]
+    },
+    {
+        "id": "71f120f9.1df59",
+        "type": "function",
+        "z": "372cc78f.3c11f8",
+        "name": "temperature1",
+        "func": "function getRndInteger(min, max) {\n  return Math.floor(Math.random() * (max - min + 1) ) + min;\n}\n\nmsg.payload=getRndInteger(20, 50)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "736b8c94.febf9c",
+        "type": "ui_chart",
+        "z": "372cc78f.3c11f8",
+        "name": "TempChart",
+        "group": "572c601d.e4943",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature 1 in °C",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "loading ....",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "30",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 670,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8db3f885.6a82b",
+        "type": "inject",
+        "z": "372cc78f.3c11f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "71f120f9.1df59"
+            ]
+        ]
+    },
+    {
+        "id": "c2ea43b8.6738a8",
+        "type": "ui_text",
+        "z": "372cc78f.3c11f8",
+        "group": "572c601d.e4943",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 410,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "749aa558.58cefc",
+        "type": "inject",
+        "z": "372cc78f.3c11f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "30",
+        "payloadType": "str",
+        "x": 170,
+        "y": 540,
+        "wires": [
+            [
+                "f12f15ea.71e738"
+            ]
+        ]
+    },
+    {
+        "id": "f12f15ea.71e738",
+        "type": "ui_text",
+        "z": "372cc78f.3c11f8",
+        "group": "572c601d.e4943",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Min. Threshold:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 400,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d21f3ea6.4403e",
+        "type": "inject",
+        "z": "372cc78f.3c11f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60",
+        "payloadType": "str",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            [
+                "cd96716e.3d39e8"
+            ]
+        ]
+    },
+    {
+        "id": "cd96716e.3d39e8",
+        "type": "ui_text",
+        "z": "372cc78f.3c11f8",
+        "group": "572c601d.e4943",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Min. Threshold:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 400,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "4f6e4a11.076bac",
+        "type": "ui_template",
+        "z": "372cc78f.3c11f8",
+        "group": "572c601d.e4943",
+        "name": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"text-align: center; font-size: 1em; color: white; background: {{(msg.payload>=30 && msg.payload<=60) ? 'green' : 'red'}}\">\n    Status<br>\n    <b>{{(msg.payload>=30 && msg.payload<=60) ? 'Good - No Need to Act' : 'Error - Check Signal Chain'}}</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 660,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b936cbd4.768cb8",
+        "type": "inject",
+        "z": "372cc78f.3c11f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "°C",
+        "payloadType": "str",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "e1c5fbaa.cb5df8"
+            ]
+        ]
+    },
+    {
+        "id": "e1c5fbaa.cb5df8",
+        "type": "ui_text",
+        "z": "372cc78f.3c11f8",
+        "group": "572c601d.e4943",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Unit:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cbce2dbf.669778",
+        "type": "inject",
+        "z": "372cc78f.3c11f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=T1",
+        "payload": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 40,
+        "wires": [
+            [
+                "1ca5243665341062"
+            ]
+        ]
+    },
+    {
+        "id": "1ca5243665341062",
+        "type": "OpcUa-Client2-Read",
+        "z": "372cc78f.3c11f8",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 370,
+        "y": 100,
+        "wires": [
+            [
+                "736b8c94.febf9c",
+                "4f6e4a11.076bac",
+                "c2ea43b8.6738a8"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "fd5bc6b6.43a638",
+        "type": "function",
+        "z": "3df697c2.b13998",
+        "name": "heater1",
+        "func": "function getRndInteger(min, max) {\n  return Math.floor(Math.random() * (max - min + 1) ) + min;\n}\n\nmsg.payload=getRndInteger(0, 100)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da27a2b9.212f2",
+        "type": "ui_chart",
+        "z": "3df697c2.b13998",
+        "name": "ActualTemperatureChart",
+        "group": "89d0a5dc.9fed88",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "ActualTemperature 1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "loading ....",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "30",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 690,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71653502.f3dc4c",
+        "type": "inject",
+        "z": "3df697c2.b13998",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "fd5bc6b6.43a638"
+            ]
+        ]
+    },
+    {
+        "id": "fdbe53d5.e90f68",
+        "type": "ui_text",
+        "z": "3df697c2.b13998",
+        "group": "89d0a5dc.9fed88",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "bc5b59f.ca7d328",
+        "type": "inject",
+        "z": "3df697c2.b13998",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "30",
+        "payloadType": "str",
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "e6c84010.b83978"
+            ]
+        ]
+    },
+    {
+        "id": "e6c84010.b83978",
+        "type": "ui_text",
+        "z": "3df697c2.b13998",
+        "group": "89d0a5dc.9fed88",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Min. Threshold:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 380,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ed225c8a.b761a",
+        "type": "inject",
+        "z": "3df697c2.b13998",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "60",
+        "payloadType": "str",
+        "x": 150,
+        "y": 620,
+        "wires": [
+            [
+                "d2a5e14a.e99ac8"
+            ]
+        ]
+    },
+    {
+        "id": "d2a5e14a.e99ac8",
+        "type": "ui_text",
+        "z": "3df697c2.b13998",
+        "group": "89d0a5dc.9fed88",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Min. Threshold:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 380,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9d81073a.327ee",
+        "type": "ui_template",
+        "z": "3df697c2.b13998",
+        "group": "89d0a5dc.9fed88",
+        "name": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"text-align: center; font-size: 1em; color: white; background: {{(msg.payload>=30 && msg.payload<=60) ? 'green' : 'red'}}\">\n    Status<br>\n    <b>{{(msg.payload>=30 && msg.payload<=60) ? 'Good - No Need to Act' : 'Error - Check Signal Chain'}}</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 640,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6361186c.70f37",
+        "type": "inject",
+        "z": "3df697c2.b13998",
+        "name": "°C",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-",
+        "payloadType": "str",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "e8797069.d93af8"
+            ]
+        ]
+    },
+    {
+        "id": "e8797069.d93af8",
+        "type": "ui_text",
+        "z": "3df697c2.b13998",
+        "group": "89d0a5dc.9fed88",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Unit:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 350,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3e5f6779.564788",
+        "type": "inject",
+        "z": "3df697c2.b13998",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=H1",
+        "payload": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "2b1d8a45fd1c1997"
+            ]
+        ]
+    },
+    {
+        "id": "2b1d8a45fd1c1997",
+        "type": "OpcUa-Client2-Read",
+        "z": "3df697c2.b13998",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "da27a2b9.212f2",
+                "9d81073a.327ee",
+                "fdbe53d5.e90f68"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "666aa606.42abc",
+        "type": "function",
+        "z": "d8068ea.5aa86f",
+        "name": "LED",
+        "func": "function getRndInteger(min, max) {\n  return Math.floor(Math.random() * (max - min + 1) ) + min;\n}\n\nmsg.payload=getRndInteger(0, 1)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 350,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40069953.c64568",
+        "type": "ui_chart",
+        "z": "d8068ea.5aa86f",
+        "name": "LEDChart",
+        "group": "58c39458.f2096c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "LED",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "loading ....",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "30",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 680,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8475b28.b97768",
+        "type": "inject",
+        "z": "d8068ea.5aa86f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "666aa606.42abc"
+            ]
+        ]
+    },
+    {
+        "id": "406d580a.53c04",
+        "type": "ui_text",
+        "z": "d8068ea.5aa86f",
+        "group": "58c39458.f2096c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 430,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d3ae0d24.51c1e",
+        "type": "inject",
+        "z": "d8068ea.5aa86f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 190,
+        "y": 580,
+        "wires": [
+            [
+                "86f1d053.1627a"
+            ]
+        ]
+    },
+    {
+        "id": "86f1d053.1627a",
+        "type": "ui_text",
+        "z": "d8068ea.5aa86f",
+        "group": "58c39458.f2096c",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Min. Threshold:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 420,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4429ce06.c471d",
+        "type": "inject",
+        "z": "d8068ea.5aa86f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "x": 190,
+        "y": 640,
+        "wires": [
+            [
+                "a5576891.0ac3e"
+            ]
+        ]
+    },
+    {
+        "id": "a5576891.0ac3e",
+        "type": "ui_text",
+        "z": "d8068ea.5aa86f",
+        "group": "58c39458.f2096c",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Min. Threshold:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 420,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "6588f2ad.4e3cfc",
+        "type": "ui_template",
+        "z": "d8068ea.5aa86f",
+        "group": "58c39458.f2096c",
+        "name": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"text-align: center; font-size: 1em; color: white; background: {{(msg.payload>=0 && msg.payload<=1) ? 'green' : 'red'}}\">\n    Status<br>\n    <b>{{(msg.payload>=0 && msg.payload<=1) ? 'Good - No Need to Act' : 'Error - Check Signal Chain'}}</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 680,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8827e8cf.6cec1",
+        "type": "inject",
+        "z": "d8068ea.5aa86f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-",
+        "payloadType": "str",
+        "x": 190,
+        "y": 520,
+        "wires": [
+            [
+                "f07e67ca.838e6"
+            ]
+        ]
+    },
+    {
+        "id": "f07e67ca.838e6",
+        "type": "ui_text",
+        "z": "d8068ea.5aa86f",
+        "group": "58c39458.f2096c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Unit:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c4e30fca.c911a",
+        "type": "inject",
+        "z": "d8068ea.5aa86f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=led",
+        "payload": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "6a24f6a87001bffb"
+            ]
+        ]
+    },
+    {
+        "id": "6a24f6a87001bffb",
+        "type": "OpcUa-Client2-Read",
+        "z": "d8068ea.5aa86f",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "40069953.c64568",
+                "6588f2ad.4e3cfc",
+                "406d580a.53c04"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "51523294.5e7dcc",
+        "type": "function",
+        "z": "a67daa24.68d77",
+        "name": "heater1",
+        "func": "function getRndInteger(min, max) {\n  return Math.floor(Math.random() * (max - min + 1) ) + min;\n}\n\nmsg.payload=getRndInteger(0, 100)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f8af656.278f8a",
+        "type": "ui_chart",
+        "z": "a67daa24.68d77",
+        "name": "ManipulatedChart",
+        "group": "b1bc9efd.eb9e48",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Manipulated variable 1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "step",
+        "nodata": "loading ....",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "30",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 670,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "85c005ff.841838",
+        "type": "inject",
+        "z": "a67daa24.68d77",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 180,
+        "wires": [
+            [
+                "51523294.5e7dcc"
+            ]
+        ]
+    },
+    {
+        "id": "30958220.787fbe",
+        "type": "ui_text",
+        "z": "a67daa24.68d77",
+        "group": "b1bc9efd.eb9e48",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Value:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ae828f46.fe8988",
+        "type": "inject",
+        "z": "a67daa24.68d77",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "4d10ebaf.1b054c"
+            ]
+        ]
+    },
+    {
+        "id": "4d10ebaf.1b054c",
+        "type": "ui_text",
+        "z": "a67daa24.68d77",
+        "group": "b1bc9efd.eb9e48",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Min. Threshold:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 380,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "424728b3.3902d8",
+        "type": "inject",
+        "z": "a67daa24.68d77",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "80",
+        "payloadType": "str",
+        "x": 150,
+        "y": 620,
+        "wires": [
+            [
+                "a8d80853.f03058"
+            ]
+        ]
+    },
+    {
+        "id": "a8d80853.f03058",
+        "type": "ui_text",
+        "z": "a67daa24.68d77",
+        "group": "b1bc9efd.eb9e48",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Min. Threshold:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 380,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "bfb9d7e5.b7db5",
+        "type": "ui_template",
+        "z": "a67daa24.68d77",
+        "group": "b1bc9efd.eb9e48",
+        "name": "",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<div style=\"text-align: center; font-size: 1em; color: white; background: {{(msg.payload>=0 && msg.payload<=80) ? 'green' : 'red'}}\">\n    Status<br>\n    <b>{{(msg.payload>=0 && msg.payload<=80) ? 'Good - No Need to Act' : 'Error - Check Signal Chain'}}</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 640,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "69d87018.b9011",
+        "type": "inject",
+        "z": "a67daa24.68d77",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "%",
+        "payloadType": "str",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "a2f6edc5.24d0e"
+            ]
+        ]
+    },
+    {
+        "id": "a2f6edc5.24d0e",
+        "type": "ui_text",
+        "z": "a67daa24.68d77",
+        "group": "b1bc9efd.eb9e48",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Unit:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 350,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "65753119.7d87b8",
+        "type": "inject",
+        "z": "a67daa24.68d77",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=1;s=MV1",
+        "payload": "",
+        "payloadType": "str",
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "57ed3956cb463881"
+            ]
+        ]
+    },
+    {
+        "id": "57ed3956cb463881",
+        "type": "OpcUa-Client2-Read",
+        "z": "a67daa24.68d77",
+        "inputs": 1,
+        "output": 4,
+        "name": "",
+        "endpoint": "d982760ead948d02",
+        "attributeId": "Value",
+        "nodeId": "",
+        "outputType": "Value",
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "1f8af656.278f8a",
+                "bfb9d7e5.b7db5",
+                "30958220.787fbe"
+            ],
+            []
+        ]
+    }
+]
