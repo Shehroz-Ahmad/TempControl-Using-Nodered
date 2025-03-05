@@ -73,6 +73,3 @@ This project demonstrates the power of **OPC UA in industrial automation** by in
 
 🔗 **Contributions are welcome!** Feel free to submit issues, feature requests, or pull requests. 🚀  
 
----
-
-Would you like me to add more details, such as **diagrams or flowcharts**? 📊
