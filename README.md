@@ -1,7 +1,5 @@
 # TempControl-Using-Nodered
-Here's your `README.md` file for GitHub:  
 
----
 
 ## **OPC UA-Based Temperature Control Using Node-RED**  
 
